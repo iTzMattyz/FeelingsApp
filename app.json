@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Feelings",
+    "slug": "feelings-app",
+    "version": "1.0.0",
+    "icon": "./assets/icon.png",
+    "notification": {
+      "icon": "./assets/icon.png",
+      "color": "#8B5CF6",
+      "androidMode": "default",
+      "androidCollapsedTitle": "New Feeling"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#8B5CF6",
+          "sounds": [
+            "./assets/notification.wav"
+          ],
+          "android": {
+            "useNextNotificationsApi": true
+          }
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.feelingsapp",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification",
+          "remote-notification"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8B5CF6"
+      },
+      "package": "com.yourname.feelingsapp",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "74708550-f29b-48a0-ac5b-731323c74400"
+      }
+    }
+  }
+}
